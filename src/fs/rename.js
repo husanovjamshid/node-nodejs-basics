@@ -11,7 +11,7 @@ const rename = async () => {
             join(join(__dirname), './files/properFilename.md'),
             (err) => {
                 if(err) {
-                   throw new Error(err)
+                   throw new Error('FS operation failed')
                 }
             },
         );

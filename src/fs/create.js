@@ -12,7 +12,7 @@ const create = async () => {
             });
         } 
         else {
-            throw new Error(`it's Already`)
+            throw new Error(`FS operation failed`)
         }
     } catch (error) {
         console.log(error.message);

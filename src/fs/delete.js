@@ -6,9 +6,9 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const remove = async () => {
    try {
-    fs.rmdir(join(join(__dirname), './files/fileToRemove.txt'), (err) => {
+    fs.rm(join(join(__dirname), './files/fileToRemove.txt'), (err) => {
         if(err){
-            throw new Error('Deleted failed')
+            throw new Error('FS operation failed')
         }
     });
    } catch (error) {
